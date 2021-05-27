@@ -1,0 +1,51 @@
+@import "../styles/variables.scss";
+@import "../styles/media.scss";
+@import "../styles/mixins.scss";
+
+
+body{
+    margin: 0;
+    background-color: $colGray;
+    background-image: url('../assets/grid.png');
+
+    .container {
+        @include flexbox();
+        @include flex-flow(row wrap);
+        @include justify-content(space-evenly);
+        @include align-items(center);
+        padding: 40px;
+        max-width: 1280px;
+        margin: auto;
+        height: 90vh;
+
+        .card{
+            background-color: $colBlue;
+            width: 220px;
+            height: 220px;
+            border-radius: 40px;
+            @include flexbox();
+            @include flex-flow(column nowrap);
+            @include justify-content(space-around);
+            @include align-items(center);
+            padding: 10px;
+            margin: 40px;
+            text-decoration: none;
+            color: $colWhite;
+            font-family: $Overpass;
+            transition: .3s ease-in-out;
+            z-index: 10;
+
+            h2{
+               font-size: 1.5em;
+               text-align: center;
+            }
+            p{
+                font-size: 0.8em;
+            }
+
+            &:hover{
+                transform: scale(0.9);
+            }
+        }   
+    }
+}

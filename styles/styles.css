@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+}
+
+body .wrapper {
+  width: 200vw;
+  height: 100vh;
+  background-color: #030EB5;
+}
+
+body .wrapper .texture {
+  background-image: url("../assets/grid.png");
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+body .wrapper .squares-title {
+  position: absolute;
+  top: 50%;
+  width: 200%;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+body .wrapper .squares-title h1 {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 30em;
+  font-family: "Kanit", sans-serif;
+  line-height: 0;
+  font-style: italic;
+}
+
+body .wrapper .squares-scroll {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 180%;
+}
+
+body .wrapper .squares-scroll p {
+  color: #FFFFFF;
+  font-family: "Overpass Mono", monospace;
+  text-transform: lowercase;
+  position: relative;
+}
+
+body .wrapper .squares-scroll .progress-bar {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  min-width: 2%;
+  height: 2px;
+  background-color: #FFFFFF;
+}
+
+body .wrapper .horizontal-scroll-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  top: 0;
+  left: 20%;
+}
+
+body .wrapper .horizontal-scroll-wrapper .top {
+  margin-top: 50px;
+}
+
+body .wrapper .horizontal-scroll-wrapper .low {
+  margin-top: 550px;
+}
+
+body .wrapper .horizontal-scroll-wrapper .squares-item {
+  width: 250px;
+  height: 250px;
+  margin-left: 140px;
+}
+
+body .wrapper .horizontal-scroll-wrapper .squares-item .squares-link {
+  text-decoration: none;
+}
+
+body .wrapper .horizontal-scroll-wrapper .squares-item .squares-link .projectImage {
+  width: 100%;
+  height: auto;
+}
+
+body .wrapper .horizontal-scroll-wrapper .squares-item .squares-link .projectTitle {
+  font-family: "Overpass Mono", monospace;
+  color: #FFFFFF;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #464646;
+}
+
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #c0c0c0;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+/*# sourceMappingURL=styles.css.map */

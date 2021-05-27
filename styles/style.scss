@@ -1,0 +1,134 @@
+@import "../styles/variables.scss";
+@import "../styles/media.scss";
+
+body{
+    margin: 0;
+
+    .wrapper{
+        width: 200vw;
+        height: 100vh;
+        background-color: $colBlue;
+
+        .texture{
+            background-image: url("../assets/grid.png");
+            height: 100%;
+            width: 100%;
+            position: fixed;
+        }
+
+        .squares-title{
+            position: absolute;
+            top: 50%;
+            width: 200%;
+            text-align: center;
+            transform: translateY(-50%);
+
+            h1{
+                color: transparent;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: $colWhite;
+                text-transform: uppercase;
+                font-size: 30em;
+                font-family: $Kanit;
+                line-height: 0;
+                font-style: italic;
+            }
+        }
+
+        .squares-scroll{
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+
+            p{     
+                color: $colWhite;
+                font-family: $Overpass;
+                text-transform: lowercase;
+                position: relative;
+
+                &::after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -100%;
+                    width: 50px;
+                    height: 2px;
+                    background-color: $colWhite;
+                }
+            }
+        }
+        
+        .horizontal-scroll-wrapper{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            position: absolute;
+            top: 0;
+            left: 10%;
+
+            .top{
+                margin-top: 50px;
+            }
+
+            .low{
+                margin-top: 550px;
+            }
+
+            .squares-item{
+                width: 250px;
+                height: 250px;
+                margin-left: 140px;
+
+                .squares-link{
+                    text-decoration: none;
+
+                    .projectImage{
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    .projectTitle{
+                        font-family: $Overpass;
+                        color: $colWhite;
+                    }
+                }
+            }
+        }
+    }
+}
+::-webkit-scrollbar {
+width: 5px;
+height: 5px;
+}
+::-webkit-scrollbar-button {
+width: 0px;
+height: 0px;
+}
+::-webkit-scrollbar-thumb {
+background: #e1e1e1;
+border: 0px none #ffffff;
+border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+background: #464646;
+}
+::-webkit-scrollbar-track {
+background: #666666;
+border: 0px none #ffffff;
+border-radius: 100px;
+}
+::-webkit-scrollbar-track:hover {
+background: #666666;
+}
+::-webkit-scrollbar-track:active {
+background: #c0c0c0;
+}
+::-webkit-scrollbar-corner {
+background: transparent;
+}

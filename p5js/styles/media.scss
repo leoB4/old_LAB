@@ -1,0 +1,51 @@
+@import "../styles/breakpoint.scss";
+
+
+// Xs device
+@mixin xs{
+    @media (min-width: #{$screen-xs-min}){
+        @content;
+    }
+}
+
+// small device
+@mixin sm{
+    @media (max-width: #{$screen-sm-min}){
+        @content;
+    }
+}
+
+// medium device
+@mixin md{
+    @media (min-width:#{$screen-md-min}){
+        @content;
+    }
+}
+
+// large device
+@mixin lg{
+    @media (min-width: #{$screen-lg-min}){
+        @content;
+    }
+}
+
+// Xlarge device
+@mixin xl{
+    @media (min-width: #{$screen-xl-min}){
+        @content;
+    }
+}
+
+// XXlarge device
+@mixin xxl{
+    @media (min-width: #{$screen-xxl-min}){
+        @content;
+    }
+}
+
+// Custom device
+@mixin rwd($screen){
+    @media (min-width: $screen+'px'){
+        @content;
+    }
+}

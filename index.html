@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Leo Blondin | Lab experilmentation</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit:800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:300,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="texture"></div>
+        <div class="squares-title">
+            <h1>My lab</h1>
+        </div>
+        <div class="squares-scroll">
+            <p>Explore</p>
+            <div class="progress-bar"></div>
+        </div>
+        <div class="horizontal-scroll-wrapper squares">
+            <div class="squares-item top">
+                <a href="./Buttons/buttons.html" class="squares-link" target="_blank">
+                    <img src="./assets/projet01.png" alt="" class="projectImage">
+                    <span class="projectTitle">Buttons</span>
+                </a>
+            </div>
+            <div class="squares-item low">
+                <a href="./Random_Stuff/randomStuff.html" class="squares-link" target="_blank">
+                    <img src="./assets/projet02.png" alt="" class="projectImage">
+                    <sp class="projectTitle">Random stuffs</span>
+                </a>
+            </div>
+            <div class="squares-item top">
+                <a href="./zdog/index.html" class="squares-link" target="_blank">
+                    <img src="./assets/projet03.png" alt="" class="projectImage">
+                    <span class="projectTitle">ZDog.js</span>
+                </a>
+            </div>
+            <div class="squares-item low">
+                <a href="./p5js/lab-p5.html" class="squares-link">
+                    <img src="./assets/projet04.png" alt="" class="projectImage">
+                    <span class="projectTitle">P5.js</span>
+                </a>
+            </div>
+            <div class="squares-item top">
+                <a href="https://codepen.io/LeoBlondin/pen/oNjdxLR" class="squares-link" target="_blank">
+                    <img src="./assets/projet05.png" alt="" class="projectImage">
+                    <span class="projectTitle">Swup.js</span>
+                </a>
+            </div>
+            <div class="squares-item low">
+                <a href="./particule_dance/index.html" class="squares-link" target="_black">
+                    <img src="./assets/projet06.png" alt="" class="projectImage">
+                    <span class="projectTitle">Particules dance</span>
+                </a>
+            </div>
+        </div>
+    
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <script type='text/javascript' src='./js/jquery.mousewheel.min.js'></script>
+    <script>
+       $(document).ready(function() {
+        $('html, body, *').mousewheel(function(e, delta) {
+            this.scrollLeft -= (delta*45);
+            e.preventDefault();
+        });
+    });
+    </script>
+    <script src="./js/progress-bar.js"></script>
+</body>
+</html>

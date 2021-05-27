@@ -1,0 +1,672 @@
+body{
+    margin: 0;
+    position: relative;
+    background-color: #121B22;
+    height: 98vh;
+    overflow: hidden;
+
+    .round-content{
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .round{
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: #FFF;
+            margin: auto;
+            position: relative;
+
+            p{
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                font-family: 'Kanit', sans-serif;
+                text-transform: uppercase;
+                font-style: italic;
+            }
+
+            .particlesJS{
+                width: 400px;
+                height: 400px;      
+                transform-origin: center;
+                position: absolute;
+                transition: 2s ease-in-out;
+                opacity: 0;
+            }
+
+            /* Anime popOn
+            /* __________________________________________________ */
+            .popOn0{
+                top: -150%;
+                left: -20%;
+                animation: movingParticlesC0 1s ease-in-out 0s 1 normal forwards;
+            }
+            .popOn1{
+                top: -120%;
+                left: 60%;
+                animation: movingParticlesC1 1s ease-in-out 0.2s 1 normal forwards;
+            }
+            .popOn2{
+                left: 95%;
+                top: -15%;
+                animation: movingParticlesC2 1s ease-in-out 0.4s 1 normal forwards;
+            }
+            .popOn3{
+                top: 60%;
+                left: 70%;
+                animation: movingParticlesC3 1s ease-in-out 0.6s 1 normal forwards;
+            }
+            .popOn4{
+                top: 95%;
+                left: -17%;
+                animation: movingParticlesC4 1s ease-in-out 0.8s 1 normal forwards;
+            }
+            .popOn5{
+                top: 50%;
+                left: -130%;
+                animation: movingParticlesC5 1s ease-in-out 1s 1 normal forwards;
+            }
+            .popOn6{
+                top: -50%;
+                left: -155%;
+                animation: movingParticlesC6 1s ease-in-out 1.2s 1 normal forwards;
+            }
+            .popOn7{
+                top: -110%;
+                left: -120%;
+                animation: movingParticlesC7 1s ease-in-out 1.4s 1 normal forwards;
+            }
+
+            /* Animle popOff
+            /* __________________________________________________ */
+            .popOff0{
+                top: -150%;
+                left: -20%;
+                opacity: 1;
+                animation: backParticles0 2s ease-in-out 0s 1 normal forwards;
+            }
+            .popOff1{
+                top: -120%;
+                left: 60%;
+                opacity: 1;
+                animation: backParticles1 2s ease-in-out 0.1s 1 normal forwards;
+            }
+            .popOff2{
+                left: 95%;
+                top: -15%;
+                opacity: 1;
+                animation: backParticles2 2s ease-in-out 0.2s 1 normal forwards;
+            }
+            .popOff3{
+                top: 60%;
+                left: 70%;
+                opacity: 1;
+                animation: backParticles3 2s ease-in-out 0.3s 1 normal forwards;
+            }
+            .popOff4{
+                top: 95%;
+                left: -17%;
+                opacity: 1;
+                animation: backParticles4 2s ease-in-out 0.4s 1 normal forwards;
+            }
+            .popOff5{
+                top: 50%;
+                left: -130%;
+                opacity: 1;
+                animation: backParticles5 2s ease-in-out 0.5s 1 normal forwards;
+            }
+            .popOff6{
+                top: -50%;
+                left: -155%;
+                opacity: 1;
+                animation: backParticles6 2s ease-in-out 0.6s 1 normal forwards;
+            }
+            .popOff7{
+                top: -110%;
+                left: -120%;
+                opacity: 1;
+                animation: backParticles7 2s ease-in-out 0.7s 1 normal forwards;
+            }
+
+            /* Anime getOn
+            /* __________________________________________________ */
+            .getOn0{
+                opacity: 0;
+                animation: getParticles0 1s ease-in-out 0s 1 normal forwards;
+            }
+            .getOn1{
+                opacity: 0;
+                animation: getParticles1 1s ease-in-out 0.1s 1 normal forwards;
+            }
+            .getOn2{
+                opacity: 0;
+                animation: getParticles2 1s ease-in-out 0.2s 1 normal forwards;
+            }
+            .getOn3{
+                opacity: 0;
+                animation: getParticles3 1s ease-in-out 0.3s 1 normal forwards;
+            }
+            .getOn4{
+                opacity: 0;
+                animation: getParticles4 1s ease-in-out 0.4s 1 normal forwards;
+            }
+            .getOn5{
+                opacity: 0;
+                animation: getParticles5 1s ease-in-out 0.5s 1 normal forwards;
+            }
+            .getOn6{
+                opacity: 0;
+                animation: getParticles6 1s ease-in-out 0.6s 1 normal forwards;
+            }
+            .getOn7{
+                opacity: 0;
+                animation: getParticles7 1s ease-in-out 0.7s 1 normal forwards;
+            }
+
+            /* Anime getOnRotate
+            /* __________________________________________________ */
+            .getOnRotate0{
+                opacity: 0;
+                animation: getParticles0 1s forwards, rotationAnim 5s ease-in-out forwards;
+            }
+            .getOnRotate1{
+                opacity: 0;
+                animation: getParticles1 1s forwards, rotationAnim 5s ease-in-out forwards;
+            }
+            .getOnRotate2{
+                opacity: 0;
+                animation: getParticles2 1s forwards, rotationAnim 5s ease-in-out forwards;
+            }
+            .getOnRotate3{
+                opacity: 0;
+                animation: getParticles3 1s forwards, rotationAnim 5s ease-in-out forwards;
+            }
+            .getOnRotate4{
+                opacity: 0;
+                animation: getParticles4 1s  forwards, rotationAnim 5s ease-in-out forwards;
+            }
+            .getOnRotate5{
+                opacity: 0;
+                animation: getParticles5 1s forwards, rotationAnim 5s  ease-in-out forwards;
+            }
+            .getOnRotate6{
+                opacity: 0;
+                animation: getParticles6 1s  forwards, rotationAnim 5s ease-in-out forwards;
+            }
+            .getOnRotate7{
+                opacity: 0;
+                animation: getParticles7 1s  forwards, rotationAnim 5s  ease-in-out forwards;
+            }
+
+            /* Anime getOnMove
+            /* __________________________________________________ */
+            .getOnMove0{
+                opacity: 0;
+                animation: getParticles0 1s forwards, moveAnim 3s infinite ease-in-out forwards;
+            }
+            .getOnMove1{
+                opacity: 0;
+                animation: getParticles1 1s forwards, moveAnim 5s infinite ease-in-out forwards;
+            }
+            .getOnMove2{
+                opacity: 0;
+                animation: getParticles2 1s forwards, moveAnim 3s infinite ease-in-out forwards;
+            }
+            .getOnMove3{
+                opacity: 0;
+                animation: getParticles3 1s forwards, moveAnim 5s infinite ease-in-out forwards;
+            }
+            .getOnMove4{
+                opacity: 0;
+                animation: getParticles4 1s  forwards, moveAnim 3s infinite ease-in-out forwards;
+            }
+            .getOnMove5{
+                opacity: 0;
+                animation: getParticles5 1s forwards, moveAnim 5s  infinite ease-in-out forwards;
+            }
+            .getOnMove6{
+                opacity: 0;
+                animation: getParticles6 1s  forwards, moveAnim 3s infinite ease-in-out forwards;
+            }
+            .getOnMove7{
+                opacity: 0;
+                animation: getParticles7 1s  forwards, moveAnim 5s infinite ease-in-out forwards;
+            }
+
+            /* Anime getOnTrembling
+            /* __________________________________________________ */
+            .getOnTrembling0{
+                opacity: 0;
+                animation: getParticles0 1s forwards, tremblingAnim 6s 0s 1 ease-in-out forwards;
+            }
+            .getOnTrembling1{
+                opacity: 0;
+                animation: getParticles1 1s forwards, tremblingAnim 6s 0.2s 1 ease-in-out forwards;
+            }
+            .getOnTrembling2{
+                opacity: 0;
+                animation: getParticles2 1s forwards, tremblingAnim 6s 0.4s 1 ease-in-out forwards;
+            }
+            .getOnTrembling3{
+                opacity: 0;
+                animation: getParticles3 1s forwards, tremblingAnim 6s 0.6s 1 ease-in-out forwards;
+            }
+            .getOnTrembling4{
+                opacity: 0;
+                animation: getParticles4 1s  forwards, tremblingAnim 6s 0.8s 1 ease-in-out forwards;
+            }
+            .getOnTrembling5{
+                opacity: 0;
+                animation: getParticles5 1s forwards, tremblingAnim 6s 1s  1 ease-in-out forwards;
+            }
+            .getOnTrembling6{
+                opacity: 0;
+                animation: getParticles6 1s  forwards, tremblingAnim 6s 1.2s 1 ease-in-out forwards;
+            }
+            .getOnTrembling7{
+                opacity: 0;
+                animation: getParticles7 1s  forwards, tremblingAnim 6s 1.4s 1 ease-in-out forwards;
+            }
+        }
+    }
+
+}
+
+/* Rotation
+/* __________________________________________________ */
+@keyframes rotationAnim {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* Move
+/* __________________________________________________ */
+@keyframes moveAnim {
+    from{
+        transform: scale(0.5);
+    }
+    50%{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0.5);
+    }
+    
+}
+
+/* Trembling
+/* __________________________________________________ */
+@keyframes tremblingAnim {
+    from{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(350px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(-350px);
+    }
+    to{
+        transform: translateX(0);
+    }
+    
+}
+
+/* Particule 0
+/* __________________________________________________ */
+@keyframes movingParticlesC0 {
+    from{
+        opacity: 0;
+        border-radius: 100%;
+    }
+    
+    to{
+        opacity: 1;
+        border-radius: 0;
+    }
+}
+@keyframes backParticles0 {
+    from{
+        opacity: 1;
+        border-radius: 0;
+    }
+    
+    to{
+        top:0;
+        left: 0;
+        opacity: 0;
+        border-radius: 100%;
+    }
+}
+@keyframes getParticles0 {
+    from{
+        top: 0;
+        left: 0;
+        opacity: 0;
+        border-radius: 0;
+    }
+    
+    to{
+        top: -150%;
+        left: -20%;
+        opacity: 1;
+        border-radius: 100%;
+    }
+}
+/* Particule 1
+/* __________________________________________________ */
+@keyframes movingParticlesC1 {
+    from{
+        opacity: 0;
+        border-radius: 100%;
+    }
+    to{
+        opacity: 1;
+        transform: rotate(35deg);
+        border-radius: 0;
+    }
+}
+
+@keyframes backParticles1 {
+    from{
+        transform: rotate(35deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    
+    to{
+        top:0;
+        left: 0;
+        transform: rotate(35deg);
+        opacity: 0;
+        border-radius: 100%;
+    }
+}
+
+@keyframes getParticles1 {
+    from{
+        top: 0;
+        left: 0;
+        opacity: 0;
+        border-radius: 0;
+    }
+    
+    to{
+        top: -120%;
+        left: 60%;
+        opacity: 1;
+        border-radius: 100%;
+    }
+}
+/* Particule 2
+/* __________________________________________________ */
+@keyframes movingParticlesC2 {
+    from{
+        opacity: 0;
+        border-radius: 100%;
+    }
+    to{
+        transform: rotate(-10deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+}
+
+@keyframes backParticles2 {
+    from{
+        transform: rotate(-10deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    
+    to{
+        top:0;
+        left: 0;
+        opacity: 0;
+        border-radius: 100%;
+    }
+}
+
+@keyframes getParticles2 {
+    from{
+        top: 0;
+        left: 0;
+        opacity: 0;
+        border-radius: 0;
+    }
+    
+    to{
+        left: 95%;
+        top: -15%;
+        opacity: 1;
+        border-radius: 100%;
+    }
+}
+
+/* Particule 3
+/* __________________________________________________ */
+@keyframes movingParticlesC3 {
+    from{
+        opacity: 0;
+        border-radius: 100%;
+    }
+    to{
+        transform: rotate(20deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+}
+
+@keyframes backParticles3 {
+    from{
+        transform: rotate(20deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    
+    to{
+        top:0;
+        left: 0;
+        opacity: 0;
+        border-radius: 100%;
+    }
+}
+
+@keyframes getParticles3 {
+    from{
+        top: 0;
+        left: 0;
+        opacity: 0;
+        border-radius: 0;
+    }
+    
+    to{
+        top: 60%;
+        left: 70%;
+        opacity: 1;
+        border-radius: 100%;
+    }
+}
+/* Particule 4
+/* __________________________________________________ */
+@keyframes movingParticlesC4 {
+    from{
+        opacity: 0;
+        border-radius: 100%;
+    }
+    to{
+        transform: rotate(-15deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+}
+
+@keyframes backParticles4 {
+    from{
+        transform: rotate(-15deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    
+    to{
+        top:0;
+        left: 0;
+        opacity: 0;
+        border-radius: 100%;
+    }
+}
+
+@keyframes getParticles4 {
+    from{
+        top: 0;
+        left: 0;
+        opacity: 0;
+        border-radius: 0;
+    }
+    
+    to{
+        top: 95%;
+        left: -17%;
+        opacity: 1;
+        border-radius: 100%;
+    }
+}
+/* Particule 5
+/* __________________________________________________ */
+@keyframes movingParticlesC5 {
+    from{
+        opacity: 0;
+        border-radius: 100%;
+    }
+    to{
+        transform: rotate(35deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+}
+
+@keyframes backParticles5 {
+    from{
+        transform: rotate(35deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    
+    to{
+        top:0;
+        left: 0;
+        opacity: 0;
+        border-radius: 100%;
+    }
+}
+
+@keyframes getParticles5 {
+    from{
+        top: 0;
+        left: 0;
+        opacity: 0;
+        border-radius: 0;
+    }
+    
+    to{
+        top: 50%;
+        left: -130%;
+        opacity: 1;
+        border-radius: 100%;
+    }
+}
+/* Particule 6
+/* __________________________________________________ */
+@keyframes movingParticlesC6 {
+    from{
+        opacity: 0;
+        border-radius: 100%;
+    }
+    to{
+        opacity: 1;
+        border-radius: 0;
+    }
+}
+
+@keyframes backParticles6 {
+    from{
+        opacity: 1;
+        border-radius: 0;
+    }
+    
+    to{
+        top:0;
+        left: 0;
+        opacity: 0;
+        border-radius: 100%;
+    }
+}
+
+@keyframes getParticles6 {
+    from{
+        top: 0;
+        left: 0;
+        opacity: 0;
+        border-radius: 0;
+    }
+    
+    to{
+        top: -50%;
+        left: -155%;
+        opacity: 1;
+        border-radius: 100%;
+    }
+}
+/* Particule 7
+/* __________________________________________________ */
+@keyframes movingParticlesC7 {
+    from{
+        opacity: 0;
+        border-radius: 100%;
+    }
+    to{
+        transform: rotate(45deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+}
+
+@keyframes backParticles7 {
+    from{
+        transform: rotate(45deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    
+    to{
+        top:0;
+        left: 0;
+        opacity: 0;
+        border-radius: 100%;
+    }
+}
+
+@keyframes getParticles7 {
+    from{
+        top: 0;
+        left: 0;
+        opacity: 0;
+        border-radius: 0;
+    }
+    
+    to{
+        top: -110%;
+        left: -120%;
+        opacity: 1;
+        border-radius: 100%;
+    }
+}

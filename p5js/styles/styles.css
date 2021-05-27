@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  background-color: #262626;
+  background-image: url("../assets/grid.png");
+}
+
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -moz-justify-content: space-evenly;
+  -ms-justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 40px;
+  max-width: 1280px;
+  margin: auto;
+  height: 90vh;
+}
+
+body .container .card {
+  background-color: #030EB5;
+  width: 220px;
+  height: 220px;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column nowrap;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: space-around;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 10px;
+  margin: 40px;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "Overpass Mono", monospace;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  z-index: 10;
+}
+
+body .container .card h2 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+body .container .card p {
+  font-size: 0.8em;
+}
+
+body .container .card:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+/*# sourceMappingURL=styles.css.map */
